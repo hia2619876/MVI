@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		66562C8F2E39ABEC00FB5FAA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 66562C8E2E39ABEC00FB5FAA /* Alamofire */; };
+		66562C912E39C2CA00FB5FAA /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 66562C902E39C2CA00FB5FAA /* ComposableArchitecture */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		66353D0B2E3873E30017D7A7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -45,6 +50,11 @@
 			path = merchantUITests;
 			sourceTree = "<group>";
 		};
+		66353D272E3873EA0017D7A7 /* Sources */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Sources;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66562C912E39C2CA00FB5FAA /* ComposableArchitecture in Frameworks */,
+				66562C8F2E39ABEC00FB5FAA /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,9 +87,11 @@
 		66353CF02E3873E10017D7A7 = {
 			isa = PBXGroup;
 			children = (
+				66353D272E3873EA0017D7A7 /* Sources */,
 				66353CFB2E3873E10017D7A7 /* merchant */,
 				66353D0D2E3873E30017D7A7 /* merchantTests */,
 				66353D172E3873E30017D7A7 /* merchantUITests */,
+				66562C8D2E39ABEC00FB5FAA /* Frameworks */,
 				66353CFA2E3873E10017D7A7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +104,13 @@
 				66353D142E3873E30017D7A7 /* merchantUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		66562C8D2E39ABEC00FB5FAA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -109,9 +130,12 @@
 			);
 			fileSystemSynchronizedGroups = (
 				66353CFB2E3873E10017D7A7 /* merchant */,
+				66353D272E3873EA0017D7A7 /* Sources */,
 			);
 			name = merchant;
 			packageProductDependencies = (
+				66562C8E2E39ABEC00FB5FAA /* Alamofire */,
+				66562C902E39C2CA00FB5FAA /* ComposableArchitecture */,
 			);
 			productName = merchant;
 			productReference = 66353CF92E3873E10017D7A7 /* merchant.app */;
@@ -195,6 +219,10 @@
 			);
 			mainGroup = 66353CF02E3873E10017D7A7;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				6610F7342E38BAA90021F7BF /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				6610F7352E39A81A0021F7BF /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 66353CFA2E3873E10017D7A7 /* Products */;
 			projectDirPath = "";
@@ -269,7 +297,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		66353D1C2E3873E30017D7A7 /* Debug */ = {
+		66353D1C2E3873E30017D7A7 /* Beta */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -328,9 +356,9 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Debug;
+			name = Beta;
 		};
-		66353D1D2E3873E30017D7A7 /* Release */ = {
+		66353D1D2E3873E30017D7A7 /* Prod */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -381,9 +409,9 @@
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
-			name = Release;
+			name = Prod;
 		};
-		66353D1F2E3873E30017D7A7 /* Debug */ = {
+		66353D1F2E3873E30017D7A7 /* Beta */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -420,9 +448,9 @@
 				TARGETED_DEVICE_FAMILY = "1,2,7";
 				XROS_DEPLOYMENT_TARGET = 2.1;
 			};
-			name = Debug;
+			name = Beta;
 		};
-		66353D202E3873E30017D7A7 /* Release */ = {
+		66353D202E3873E30017D7A7 /* Prod */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -459,9 +487,9 @@
 				TARGETED_DEVICE_FAMILY = "1,2,7";
 				XROS_DEPLOYMENT_TARGET = 2.1;
 			};
-			name = Release;
+			name = Prod;
 		};
-		66353D222E3873E30017D7A7 /* Debug */ = {
+		66353D222E3873E30017D7A7 /* Beta */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -482,9 +510,9 @@
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/merchant.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/merchant";
 				XROS_DEPLOYMENT_TARGET = 2.1;
 			};
-			name = Debug;
+			name = Beta;
 		};
-		66353D232E3873E30017D7A7 /* Release */ = {
+		66353D232E3873E30017D7A7 /* Prod */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -505,9 +533,9 @@
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/merchant.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/merchant";
 				XROS_DEPLOYMENT_TARGET = 2.1;
 			};
-			name = Release;
+			name = Prod;
 		};
-		66353D252E3873E30017D7A7 /* Debug */ = {
+		66353D252E3873E30017D7A7 /* Beta */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -527,9 +555,9 @@
 				TEST_TARGET_NAME = merchant;
 				XROS_DEPLOYMENT_TARGET = 2.1;
 			};
-			name = Debug;
+			name = Beta;
 		};
-		66353D262E3873E30017D7A7 /* Release */ = {
+		66353D262E3873E30017D7A7 /* Prod */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -549,7 +577,152 @@
 				TEST_TARGET_NAME = merchant;
 				XROS_DEPLOYMENT_TARGET = 2.1;
 			};
-			name = Release;
+			name = Prod;
+		};
+		66353D412E3875BF0017D7A7 /* Stage */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Stage;
+		};
+		66353D422E3875BF0017D7A7 /* Stage */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = merchant/merchant.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"merchant/Preview Content\"";
+				DEVELOPMENT_TEAM = J2UC8464D7;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.ecpay.app.merchant;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Stage;
+		};
+		66353D432E3875BF0017D7A7 /* Stage */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J2UC8464D7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.ecpay.app.merchantTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/merchant.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/merchant";
+				XROS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Stage;
+		};
+		66353D442E3875BF0017D7A7 /* Stage */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J2UC8464D7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tw.com.ecpay.app.merchantUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_TARGET_NAME = merchant;
+				XROS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Stage;
 		};
 /* End XCBuildConfiguration section */
 
@@ -557,40 +730,76 @@
 		66353CF42E3873E10017D7A7 /* Build configuration list for PBXProject "merchant" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				66353D1C2E3873E30017D7A7 /* Debug */,
-				66353D1D2E3873E30017D7A7 /* Release */,
+				66353D1C2E3873E30017D7A7 /* Beta */,
+				66353D412E3875BF0017D7A7 /* Stage */,
+				66353D1D2E3873E30017D7A7 /* Prod */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Beta;
 		};
 		66353D1E2E3873E30017D7A7 /* Build configuration list for PBXNativeTarget "merchant" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				66353D1F2E3873E30017D7A7 /* Debug */,
-				66353D202E3873E30017D7A7 /* Release */,
+				66353D1F2E3873E30017D7A7 /* Beta */,
+				66353D422E3875BF0017D7A7 /* Stage */,
+				66353D202E3873E30017D7A7 /* Prod */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Beta;
 		};
 		66353D212E3873E30017D7A7 /* Build configuration list for PBXNativeTarget "merchantTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				66353D222E3873E30017D7A7 /* Debug */,
-				66353D232E3873E30017D7A7 /* Release */,
+				66353D222E3873E30017D7A7 /* Beta */,
+				66353D432E3875BF0017D7A7 /* Stage */,
+				66353D232E3873E30017D7A7 /* Prod */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Beta;
 		};
 		66353D242E3873E30017D7A7 /* Build configuration list for PBXNativeTarget "merchantUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				66353D252E3873E30017D7A7 /* Debug */,
-				66353D262E3873E30017D7A7 /* Release */,
+				66353D252E3873E30017D7A7 /* Beta */,
+				66353D442E3875BF0017D7A7 /* Stage */,
+				66353D262E3873E30017D7A7 /* Prod */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Beta;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6610F7342E38BAA90021F7BF /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.20.2;
+			};
+		};
+		6610F7352E39A81A0021F7BF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		66562C8E2E39ABEC00FB5FAA /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6610F7352E39A81A0021F7BF /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		66562C902E39C2CA00FB5FAA /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6610F7342E38BAA90021F7BF /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 66353CF12E3873E10017D7A7 /* Project object */;
 }
